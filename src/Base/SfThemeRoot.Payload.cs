@@ -1473,6 +1473,7 @@ font-family: ""e-toolkit-icons"";
     box-shadow: 0 0 0 1px ButtonText !important;
     -webkit-text-fill-color: ButtonText;
     forced-color-adjust: none;
+    z-index: 1;
   }
     
   .e-btn.e-control.e-btn-icon:not(:disabled):is(:hover,:active):focus-visible, .e-btn.e-control.e-lib.toggle-btn.e-outline:focus-visible:is(:hover,:active), .e-btn.e-control.e-lib:focus-visible:is(:hover,:active), .e-btn.e-control.e-outline:not(:disabled):is(:hover,:active):focus-visible, .e-btn.toggle-icon-only.e-outline:is(:hover,:active):focus-visible {
@@ -1495,6 +1496,7 @@ font-family: ""e-toolkit-icons"";
     border-color: Highlight !important;
     color: Highlight !important;
     outline: 2px solid Highlight !important;
+    z-index: 1;
   }
 
   .e-btn-group input:hover + label.e-btn,
@@ -1561,7 +1563,7 @@ font-family: ""e-toolkit-icons"";
 
   .e-switch-wrapper:focus-within,
   .e-switch-wrapper.e-focus {
-    outline: 2px solid Highlight !important;
+    outline: 2px solid CanvasText !important;
     outline-offset: 2px !important;
   }
  
@@ -1608,11 +1610,37 @@ font-family: ""e-toolkit-icons"";
     
   .e-css.e-switch-wrapper .e-switch-on, .e-switch-wrapper .e-switch-on {
     background-color: Highlight !important;
+    color: HighlightText !important;
+  }
+
+  .e-css.e-switch-wrapper .e-switch-off, .e-switch-wrapper .e-switch-off {
+    color: ButtonText !important;
   }
   
   .e-switch-wrapper:hover .e-switch-on {
-        background-color: HighlightText !important;
-        color: Highlight !important;
+    background-color: HighlightText !important;
+    color: ButtonText !important;
+  }
+
+  .e-switch-wrapper:hover .e-switch-off {
+    color: Highlight !important;
+  }
+
+  .e-switch-wrapper.e-switch-disabled .e-switch-inner,
+  .e-switch-wrapper.e-switch-disabled .e-switch-inner.e-switch-active,
+  .e-switch-wrapper.e-switch-disabled .e-switch-on,
+  .e-switch-wrapper.e-switch-disabled .e-switch-off {
+    background-color: Canvas !important;
+    border-color: GrayText !important;
+    color: GrayText !important;
+    forced-color-adjust: none !important;
+  }
+
+  .e-switch-wrapper.e-switch-disabled .e-switch-handle,
+  .e-switch-wrapper.e-switch-disabled .e-switch-handle.e-switch-active {
+    background-color: GrayText !important;
+    border-color: GrayText !important;
+    forced-color-adjust: none !important;
   }
 
   .e-switch-wrapper.e-switch-disabled .e-switch-inner,
